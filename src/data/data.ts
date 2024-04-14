@@ -64,20 +64,29 @@ export const SkillIcons = [
   { name: "javascript", alt: "JavaScript" },
   { name: "typescript", alt: "TypeScript" },
   { name: "css3", alt: "CSS3" },
-  { name: "html", alt: "Unknown technology or tool icon 1" },
-  { name: "react", alt: "React library" },
-  { name: "vue", alt: "Vue.js framework" },
-  { name: "tailwindcss", alt: "tailwindcss" },
-  { name: "astro", alt: "astro" },
-  { name: "sass", alt: "Sass scripting language" },
-  { name: "weixin", alt: "weixin" },
-  { name: "axurerp", alt: "Axure RP tool" },
-  { name: "xmind", alt: "xmind tool" },
-
-  { name: "dira", alt: "dira.io" },
-  { name: "office", alt: "Microsoft Office" },
-  { name: "figma", alt: "figma" },
-  { name: "sketch", alt: "Sketch app icon" },
-  { name: "photoshop", alt: "Adobe Photoshop software" }
+  { name: "html", alt: "HTML" },
+  { name: "react", alt: "React" },
+  { name: "vue", alt: "Vue.js" },
+  { name: "astro", alt: "Astro" },
+  { name: "sass", alt: "Sass" },
+  { name: "weixin", alt: "Weixin" },
 ];
 
+export const SkillICons2 = [
+  { name: "sketch", alt: "Sketch" },
+  { name: "axurerp", alt: "Axure RP" },
+  { name: "dira", alt: "Jira" },
+  { name: "office", alt: "Office" },
+  { name: "photoshop", alt: "Photoshop" },
+
+  { name: "xmind", alt: "XMind" },
+];
+export const SkillICons3 = [
+  { name: "sketch", alt: "Sketch" },
+  { name: "axurerp", alt: "Axure RP" },
+  { name: "dira", alt: "Jira" },
+  { name: "office", alt: "Office" },
+  { name: "photoshop", alt: "Photoshop" },
+
+  { name: "xmind", alt: "XMind" },
+];

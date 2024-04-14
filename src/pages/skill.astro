@@ -2,35 +2,34 @@
 import Layout from "../layouts/Layout.astro";
 import Main from "../components/Main.astro";
 import { Icon } from "astro-icon/components";
-import { SkillIcons } from "../data/data";
+import { SkillIcons, SkillICons2 } from "../data/data";
 import { Image } from "astro:assets";
-
 ---
 
 <Layout title="Welcome to Astro.">
   <Main>
-      <!-- <ul>
-       {
-         SkillIcons.map((item) => (
+    <h1 class="text-4xl font-bold mb-10">DEV</h1>
+    <ul class="flex flex-wrap gap-28 mb-10">
+      {
+        SkillIcons.map((item) => (
           <li>
-            <Icon name={`skill/${item.name}`} />
+            <Icon name={`sk/${item.name}`} class=" text-4xl" />
+            <p class=" text-center mt-4 font-bold">{item.name}</p>
           </li>
         ))
-      
-       }
-      </ul> -->
+      }
+    </ul>
+    <h1 class="text-4xl font-bold mb-10">PM</h1>
 
-      <Icon name="sk/astro" />
-      <Icon name="sk/css3" />
-
-    
-
-    
-
-    
-
-      <!-- <Icon name="sk/github" /> -->
-  
-
+    <ul class="flex flex-wrap gap-20 mb-10">
+      {
+        SkillICons2.map((item) => (
+          <li>
+            <Icon name={`sk/${item.name}`} class=" text-4xl" />
+            <p class=" text-center mt-4 font-bold">{item.name}</p>
+          </li>
+        ))
+      }
+    </ul>
   </Main>
 </Layout>
