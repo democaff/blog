@@ -4,36 +4,29 @@ import Main from "../components/Main.astro";
 
 import PostList from "../components/PostList.astro";
 
-import {AboutMe} from "../data/aboutme";
-
-const name = `{name}`
+const name = `{name}`;
 ---
 
 <Layout title="Welcome to Astro.">
   <Main>
+    <artice class="h-full flex flex-col">
+      <h1 class="text-[120px] font-bold leading-snug">
+        &lt;h1&gt;你好!<br /> 我是<p class="inline font-sans names-linear">
+          {name}
+        </p>&lt;/h1&gt;
+      </h1>
 
-    <artice class=" h-full flex  flex-col "  >
-
-     <h1 class="text-[120px] font-bold  leading-snug    ">&lt;h1&gt;你好!<br/> 我是<p class= "inline font-sans names-linear">{name}</p>&lt;/h1&gt; </h1>
-     
-    
-
-
-    <p class="text-lg font-sans  mt-8 font-bold leading-loose     w-[500px]  ">
-      我是一名产品经理，同时对前端各类技术栈的研究学习充满热<br/>
-      如果您有兴趣进一步交流,请随时通过微信联系我:AboutLInks或者您可以发送电子邮件至:cyberobj@gamil.com。
-      希望你能在这里找到一些有趣的东西。
-      
+      <p class="text-lg font-sans mt-8 font-bold leading-loose w-[500px]">
+        我是一名产品经理，同时对前端各类技术栈的研究学习充满热<br />
+        如果您有兴趣进一步交流,请随时通过微信联系我:AboutLInks或者您可以发送电子邮件至:cyberobj@gamil.com。
+        希望你能在这里找到一些有趣的东西。
       </p>
     </artice>
-   
   </Main>
 </Layout>
 
 <style>
-
   .names-linear {
-
     background: linear-gradient(135deg, #f12711 0%, #2903ff 100%);
     background-clip: text;
     -webkit-background-clip: text;
