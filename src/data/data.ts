@@ -73,20 +73,13 @@ export const SkillIcons = [
 ];
 
 export const SkillICons2 = [
-  { name: "sketch", alt: "Sketch" },
   { name: "axurerp", alt: "Axure RP" },
   { name: "dira", alt: "Jira" },
   { name: "office", alt: "Office" },
-  { name: "photoshop", alt: "Photoshop" },
-
   { name: "xmind", alt: "XMind" },
 ];
 export const SkillICons3 = [
+  { name: "figma", alt: "Axure RP" },
   { name: "sketch", alt: "Sketch" },
-  { name: "axurerp", alt: "Axure RP" },
-  { name: "dira", alt: "Jira" },
-  { name: "office", alt: "Office" },
   { name: "photoshop", alt: "Photoshop" },
-
-  { name: "xmind", alt: "XMind" },
 ];

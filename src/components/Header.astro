@@ -11,17 +11,17 @@ import { Icon } from "astro-icon/components";
   <!-- logo -->
   <div
     class="flex justify-center gap-2 mx-9 border-r-2 border-slate-600 pb-8
-    hover-bg hover:transtion ease-linear duration-300 hover:border-none "
+    hover-bg hover:transtion ease-linear duration-300 hover:border-none"
   >
     <div class="flex flex-col items-center gap-3">
       <Image src={Logo} alt="logo" class="w-8 h-8" />
       <h2 class="text-[20px] font-serif writing-vertical-lr tracking-[4px]">
-        <a href="#">Rhapsody</a>
+        <a href="#">Taylor Song</a>
       </h2>
     </div>
 
     <h1
-      class="font-bold font-serif writing-vertical-lr  text-3xl tracking-[8px]"
+      class="font-bold font-serif writing-vertical-lr text-3xl tracking-[8px]"
     >
       <a href="#">格子方方面面</a>
     </h1>
@@ -50,7 +50,7 @@ import { Icon } from "astro-icon/components";
               href={item.url || "#"}
               class={item.title === "wechat" ? "wechat-icon" : ""}
             >
-            <Icon name={`media/${item.title}`} class=" text-lg" />
+              <Icon name={`media/${item.title}`} class=" text-lg" />
             </a>
           </li>
         ))
@@ -63,13 +63,15 @@ import { Icon } from "astro-icon/components";
 </header>
 
 <script>
+  import { Image } from "astro:assets";
+
   document.addEventListener("DOMContentLoaded", (event) => {
     const wechatIcon = document.querySelector(".wechat-icon");
     if (wechatIcon) {
       wechatIcon.addEventListener("click", function (e) {
         e.preventDefault();
 
-        alert("你好你好");
+        <Image src="wechatQR" alt="wechatQR" class="w-20 h-20" />;
       });
     }
   });
