@@ -1,0 +1,15 @@
+---
+const { post } = Astro.props;
+import { formatDate } from "../utils";
+---
+
+<section>
+  <a href={`/posts/${post.slug}`}>
+    <h1 class="prose-xl font-bold mb-1">{post.data.title}</h1></a
+  >
+  <p class="inline">{formatDate(post.data.pubDate)}</p>
+  <p class="inline ml-8 prose">{post.data.categories}</p>
+  <p class="line-clamp-3 text-justify md:prose-base mt-1 prose-sm">
+    {post.body}
+  </p>
+</section>

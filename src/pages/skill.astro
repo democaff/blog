@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Main from "../components/Main.astro";
+import { Icon } from "astro-icon/components";
+import { SkillIcons } from "../data/data";
+import { Image } from "astro:assets";
+
+---
+
+<Layout title="Welcome to Astro.">
+  <Main>
+      <!-- <ul>
+       {
+         SkillIcons.map((item) => (
+          <li>
+            <Icon name={`skill/${item.name}`} />
+          </li>
+        ))
+      
+       }
+      </ul> -->
+
+      <Icon name="sk/astro" />
+      <Icon name="sk/css3" />
+
+    
+
+    
+
+    
+
+      <!-- <Icon name="sk/github" /> -->
+  
+
+  </Main>
+</Layout>

@@ -1,0 +1,76 @@
+---
+import Image from "astro/components/Image.astro";
+import Logo from "../assets/Logo.svg";
+import { navData, MediaData } from "../data/data";
+import { Icon } from "astro-icon/components";
+---
+
+<header
+  class="max-h-screen flex flex-col justify-between max-w-60 py-20 sticky top-0 px-4"
+>
+  <!-- logo -->
+  <div
+    class="flex justify-center gap-2 mx-9 border-r-2 border-slate-600 pb-8
+    hover-bg hover:transtion ease-linear duration-300 hover:border-none "
+  >
+    <div class="flex flex-col items-center gap-3">
+      <Image src={Logo} alt="logo" class="w-8 h-8" />
+      <h2 class="text-[20px] font-serif writing-vertical-lr tracking-[4px]">
+        <a href="#">Rhapsody</a>
+      </h2>
+    </div>
+
+    <h1
+      class="font-bold font-serif writing-vertical-lr  text-3xl tracking-[8px]"
+    >
+      <a href="#">格子方方面面</a>
+    </h1>
+  </div>
+  <!-- nav -->
+
+  <ul class="flex flex-col items-end mx-8">
+    {
+      navData.map((item) => (
+        <li class="py-3 font-bold  font-sans">
+          <a
+            href={item.url}
+            class=" whitespace-pre text-lg underline underline-offset-8  decoration-2  "
+          >
+            {item.title}
+          </a>
+        </li>
+      ))
+    }
+    <!-- icons -->
+    <ul class="flex gap-4 mt-8">
+      {
+        MediaData.map((item) => (
+          <li>
+            <a
+              href={item.url || "#"}
+              class={item.title === "wechat" ? "wechat-icon" : ""}
+            >
+            <Icon name={`media/${item.title}`} class=" text-lg" />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="text-[12px] mt-4 text-nowrap">&copy;2024 MYRhapsody</p>
+  </ul>
+
+  <!-- social -->
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    const wechatIcon = document.querySelector(".wechat-icon");
+    if (wechatIcon) {
+      wechatIcon.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        alert("你好你好");
+      });
+    }
+  });
+</script>

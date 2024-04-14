@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .writing-vertical-rl {
+    writing-mode: vertical-rl;
+  }
+  .writing-vertical-lr {
+    writing-mode: vertical-lr;
+  }
+}
+
+/* ------------------- */
+
+body {
+  color: "#2e405b";
+  font-family: theme("fontFamily.sans");
+  line-height: normal;
+  text-align: left;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04);
+  min-height: 100vh;
+
+  /* background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 7px 7px; */
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+@layer components {
+  .hover-bg {
+    @apply hover:bg-[#2F3F5B];
+    @apply hover:text-[#e3e3e3];
+    @apply hover:pt-8;
+   
+  }
+}
